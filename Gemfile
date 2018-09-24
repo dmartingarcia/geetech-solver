@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'sinatra'
+gem 'sinatra', '~> 2.0', '>= 2.0.4'
 gem 'require_all'
 gem 'json'
 gem 'typhoeus'
