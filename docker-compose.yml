@@ -1,0 +1,27 @@
+version: '3.5'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bundle exec rackup -p 8888 -o '0.0.0.0'
+    environment: &environment
+      - BUNDLE_PATH=/bundle
+      - GEM_HOME=/bundle
+      - BUNDLE_JOBS=3
+    volumes:
+      - .:/app
+      - ./tmp:/tmp
+      - console_history:/root/.irb_history
+      - docker_bash_history:/root/bash_history
+      - gem_storage:/bundle
+    ports:
+      - 8888:8888
+    tty: true
+    stdin_open: true
+
+volumes:
+  app:
+  gem_storage:
+  console_history:
+  docker_bash_history:
