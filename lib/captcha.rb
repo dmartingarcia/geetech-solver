@@ -28,7 +28,7 @@ class Captcha
 
   def request_geetest_info
     headers = {
-      "Referer" => "https://www.infojobs.net/distil_r_captcha.html",
+      "Referer" => "*r_captcha.html",
       "User-Agent" => "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.75 Safari/537.36"
     }
     callback = self.class.get_callback_string
