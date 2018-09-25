@@ -2,8 +2,8 @@ require 'rmagick'
 require 'chunky_png/rmagick'
 
 class Captcha
-  URL = "https://www.infojobs.net/distil_r_captcha.html".freeze
-  CHALLENGE_URL = "https://www.infojobs.net/distil_r_captcha_challenge".freeze
+  URL = "*r_captcha.html".freeze
+  CHALLENGE_URL = "*r_captcha_challenge".freeze
   GEETEST_URL = "https://api-na.geetest.com/get.php?".freeze
   GEETEST_REFRESH_URL = "https://api-na.geetest.com/refresh.php?".freeze
   STATIC_FILE_URL = "https://static.geetest.com/".freeze
